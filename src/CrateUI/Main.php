@@ -32,6 +32,7 @@ use pocketmine\event\server\DataPacketReceiveEvent;
 use pocketmine\network\mcpe\protocol\ModalFormResponsePacket;
 
 use CrateUI\Commands\getkey;
+use CrateUI\Commands\getkeyui;
 
 class Main extends PluginBase implements Listener{
 
@@ -51,6 +52,7 @@ class Main extends PluginBase implements Listener{
 		$this->cfg = $this->getConfig();
 	 	$this->getServer()->getPluginManager()->registerEvents($this, $this);
 	 	$this->getServer()->getCommandMap()->register("getkey", new getkey("getkey", $this));
+	        $this->getServer()->getCommandMap()->register("getkeyui", new getkeyui("getkeyui", $this));
 		$this->getLogger()->info("§aEnabled.");
 	}
 
