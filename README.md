@@ -8,8 +8,6 @@ Click [here](https://poggit.pmmp.io/ci/xXNiceAssasinl0/CrateUI/CrateUI) To downl
 
 - [ ] amount
 
-- [ ] /keyui Command
-
 # Finished:
 - [x] No Need FormAPI Plugin to work.
 
@@ -38,7 +36,9 @@ Click [here](https://poggit.pmmp.io/ci/xXNiceAssasinl0/CrateUI/CrateUI) To downl
  
  - [x] key | getkey : get crate key!
  
- - [x] crate | open gui
+ - [x] crate : open crate ui!
+ 
+ - [x] keyui | getkeyui : Open keys ui!
  
  # Permissions:
  
