@@ -3,4 +3,148 @@ author: xXNiceAssasinl0, Az928
 
 #Do Not Remove " Lines
 
+
+#Prefix For Crates
 Prefix: "§7(§4§l!§r§7)"
+
+#Items For Crates
+
+##Common
+
+Common:
+                1:
+                   Item: "265:0"
+                   Amount: "15"
+                   Broadcast: " §bYou won 15 IronIngot!"
+                2:
+                   Item: "264:0"
+                   Amount: "1"
+                   Broadcast: " §bYou won 1 diamond!"
+                3:
+                   Item: "17:0"
+                   Amount: "20"
+                   Broadcast: " §bYou won 20 oak wood!"
+
+
+##Vote
+
+Vote:
+                1:
+                   Item: "265:0"
+                   Amount: "32"
+                   Broadcast: " §bYou won 32 IronIngot!"
+                2:
+                   Item: "264:0"
+                   Amount: "10"
+                   Broadcast: " §bYou won 10 diamond!"
+                3:
+                   Item: "17:0"
+                   Amount: "64"
+                   Broadcast: " §bYou won 64 oak wood!"
+                4:
+                   Item: "2:0"
+                   Amount: "43"
+                   Broadcast: " §bYou won 43 grass block!"
+                5:
+                   Item: "20:0"
+                   Amount: "15"
+                   Broadcast: " §bYou won 15 glass!"
+
+
+##Rare
+
+Rare:
+                1:
+                   Item: "265:0"
+                   Amount: "50"
+                   Broadcast: " §bYou won 50 IronIngot!"
+                2:
+                   Item: "264:0"
+                   Amount: "20"
+                   Broadcast: " §bYou won 20 diamond!"
+                3:
+                   Item: "388:0"
+                   Amount: "20"
+                   Broadcast: " §bYou won 20 emerald!"
+                4:
+                   Item: "133:0"
+                   Amount: "10"
+                   Broadcast: " §bYou won 10 emerald block!"
+                5:
+                   Item: "49:0"
+                   Amount: "14"
+                   Broadcast: " §bYou won 14 obsidian!"
+
+
+##Mythic
+
+Mythic:
+                1:
+                   Item: "265:0"
+                   Amount: "64"
+                   Broadcast: " §bYou won 64 IronIngot!"
+                2:
+                   Item: "264:0"
+                   Amount: "32"
+                   Broadcast: " §bYou won 32 diamond!"
+                3:
+                   Item: "388:0"
+                   Amount: "33"
+                   Broadcast: " §bYou won 33 emerald!"
+                4:
+                   Item: "133:0"
+                   Amount: "10"
+                   Broadcast: " §bYou won 10 emerald block!"
+                5:
+                   Item: "1:0"
+                   Amount: "0"
+                   Broadcast: " §bYou won nothing!"
+                6:
+                   Item: "49:0"
+                   Amount: "32"
+                   Broadcast: " §bYou won 32 Obsidian!"
+                7:
+                   Item: "388:0"
+                   Amount: "54"
+                   Broadcast: " §bYou won 54 emerald!"
+                8:
+                   Item: "133:0"
+                   Amount: "21"
+                   Broadcast: " §bYou won 21 emerald block!"
+
+
+##Legendary
+
+Legendary:
+                1:
+                   Item: "265:0"
+                   Amount: "64"
+                   Broadcast: " §bYou won 64 IronIngot!"
+                2:
+                   Item: "264:0"
+                   Amount: "64"
+                   Broadcast: " §bYou won 64 diamond!"
+                3:
+                   Item: "388:0"
+                   Amount: "64"
+                   Broadcast: " §bYou won 64 emerald!"
+                4:
+                   Item: "133:0"
+                   Amount: "64"
+                   Broadcast: " §bYou won 64 emerald block!"
+                5:
+                   Item: "1:0"
+                   Amount: "64"
+                   Broadcast: " §bYou won 64 stone!"
+                6:
+                   Item: "49:0"
+                   Amount: "64"
+                   Broadcast: " §bYou won 64 Obsidian!"
+                7:
+                   Item: "388:0"
+                   Amount: "64"
+                   Broadcast: " §bYou won 64 emerald!"
+                8:
+                   Item: "133:0"
+                   Amount: "64"
+                   Broadcast: " §bYou won 64 emerald block!"
