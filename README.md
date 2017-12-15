@@ -4,11 +4,12 @@ Click [here](https://poggit.pmmp.io/ci/xXNiceAssasinl0/CrateUI/CrateUI) To downl
 
 # Features
 
-- [ ] Fix all Crates Items
-
 - [ ] amount
 
 # Finished:
+
+- [x] Fix all Crates Items
+
 - [x] No Need FormAPI Plugin to work.
 
 - [x] Title on Open Crate.
