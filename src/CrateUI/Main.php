@@ -9,6 +9,7 @@ use pocketmine\utils\TextFormat;
 use pocketmine\utils\Config;
 
 use pocketmine\item\Item;
+use pocketmine\item\ItemFactory;
 use pocketmine\item\enchantment\Enchantment;
 
 use pocketmine\level\Level;
@@ -137,6 +138,25 @@ class Main extends PluginBase implements Listener{
 								$pos1 = new Vector3($x, $y, $z);
 								$name = $sender->getName();
 								$prefix = $this->cfg->get("Prefix");
+
+							//Item1
+
+								$CommonItem1 = ItemFactory::fromString($this->cfg->getNested("Common.1.Item"));
+								$CommonAmount1 = $this->cfg->getNested("Common.1.Amount");
+								$CommonBroadcast1 = $this->cfg->getNested("Common.1.Broadcast");
+
+							//Item 2
+
+								$CommonItem2 = ItemFactory::fromString($this->cfg->getNested("Common.2.Item"));
+								$CommonAmount2 = $this->cfg->getNested("Common.2.Amount");
+								$CommonBroadcast2 = $this->cfg->getNested("Common.2.Broadcast");
+
+							//Item 3
+
+								$CommonItem3 = ItemFactory::fromString($this->cfg->getNested("Common.3.Item"));
+								$CommonAmount3 = $this->cfg->getNested("Common.3.Amount");
+								$CommonBroadcast3 = $this->cfg->getNested("Common.3.Broadcast");
+
 								$level->addSound(new EndermanTeleportSound($pos1));
 								$level->addParticle(new LavaParticle($pos1));
 								$inv->removeItem(Item::get(131,1,1));
@@ -145,16 +165,16 @@ class Main extends PluginBase implements Listener{
 								$result = rand(1,3);
 									 switch($result){
 							case 1:
-								$inv->addItem(Item::get(265,0,15));
-								$sender->sendMessage($prefix . " §bYou won 15 IronIngot!");
+								$inv->addItem($CommonItem1->setCount($CommonAmount1));
+								$sender->sendMessage($prefix . $CommonBroadcast1);
 								 break;
 							case 2:
-								$inv->addItem(Item::get(264,0,1));
-								$sender->sendMessage($prefix . " §bYou won 1 diamond!");
+								$inv->addItem($CommonItem2->setCount($CommonAmount2));
+								$sender->sendMessage($prefix . $CommonBroadcast2);
 								 break;
 							case 3:
-									$inv->addItem(Item::get(17,0,20));
-									$sender->sendMessage($prefix . " §bYou won 20 oak wood!");
+								$inv->addItem($CommonItem3->setCount($CommonAmount3));
+								$sender->sendMessage($prefix . $CommonBroadcast3);
 								 break;
 									 }
 							}else{
@@ -174,24 +194,63 @@ class Main extends PluginBase implements Listener{
 								$pos1 = new Vector3($x, $y, $z);
 								$name = $sender->getName();
 								$prefix = $this->cfg->get("Prefix");
+
+							//Item1
+
+								$VoteItem1 = ItemFactory::fromString($this->cfg->getNested("Vote.1.Item"));
+								$VoteAmount1 = $this->cfg->getNested("Vote.1.Amount");
+								$VoteBroadcast1 = $this->cfg->getNested("Vote.1.Broadcast");
+
+							//Item 2
+
+								$VoteItem2 = ItemFactory::fromString($this->cfg->getNested("Vote.2.Item"));
+								$VoteAmount2 = $this->cfg->getNested("Vote.2.Amount");
+								$VoteBroadcast2 = $this->cfg->getNested("Vote.2.Broadcast");
+
+							//Item 3
+
+								$VoteItem3 = ItemFactory::fromString($this->cfg->getNested("Vote.3.Item"));
+								$VoteAmount3 = $this->cfg->getNested("Vote.3.Amount");
+								$VoteBroadcast3 = $this->cfg->getNested("Vote.3.Broadcast");
+
+							//Item 4
+
+								$VoteItem4 = ItemFactory::fromString($this->cfg->getNested("Vote.4.Item"));
+								$VoteAmount4 = $this->cfg->getNested("Vote.4.Amount");
+								$VoteBroadcast4 = $this->cfg->getNested("Vote.4.Broadcast");
+
+							//Item 5
+
+								$VoteItem5 = ItemFactory::fromString($this->cfg->getNested("Vote.5.Item"));
+								$VoteAmount5 = $this->cfg->getNested("Vote.5.Amount");
+								$VoteBroadcast5 = $this->cfg->getNested("Vote.5.Broadcast");
+
 								$level->addSound(new EndermanTeleportSound($pos1));
 								$level->addParticle(new LavaParticle($pos1));
 								$inv->removeItem(Item::get(131,2,1));
 								$sender->addTitle("§eOpening Crate:", "§cVote!");
 								$this->getServer()->broadcastMessage($prefix . " §b$name §ajust opened §cVote §aCrate!");
-								$result = rand(1,3);
+								$result = rand(1,5);
 									 switch($result){
 							case 1:
-								$inv->addItem(Item::get(265,0,15));
-								$sender->sendMessage($prefix . " §bYou won 15 IronIngot!");
+								$inv->addItem($VoteItem1->setCount($VoteAmount1));
+								$sender->sendMessage($prefix . $VoteBroadcast1);
 								 break;
 							case 2:
-								$inv->addItem(Item::get(264,0,1));
-								$sender->sendMessage($prefix . " §bYou won 1 diamond!");
+								$inv->addItem($VoteItem2->setCount($VoteAmount2));
+								$sender->sendMessage($prefix . $VoteBroadcast2);
 								 break;
 							case 3:
-									$inv->addItem(Item::get(17,0,20));
-									$sender->sendMessage($prefix . " §bYou won 20 oak wood!");
+								$inv->addItem($VoteItem3->setCount($VoteAmount3));
+								$sender->sendMessage($prefix . $VoteBroadcast3);
+								 break;
+							case 4:
+								$inv->addItem($VoteItem4->setCount($VoteAmount4));
+								$sender->sendMessage($prefix . $VoteBroadcast4);
+								 break;
+							case 5:
+								$inv->addItem($VoteItem5->setCount($VoteAmount5));
+								$sender->sendMessage($prefix . $VoteBroadcast5);
 								 break;
 									 }
 							}else{
@@ -211,40 +270,63 @@ class Main extends PluginBase implements Listener{
 								$pos1 = new Vector3($x, $y, $z);
 								$name = $sender->getName();
 								$prefix = $this->cfg->get("Prefix");
+
+							//Item1
+
+								$RareItem1 = ItemFactory::fromString($this->cfg->getNested("Rare.1.Item"));
+								$RareAmount1 = $this->cfg->getNested("Rare.1.Amount");
+								$RareBroadcast1 = $this->cfg->getNested("Rare.1.Broadcast");
+
+							//Item 2
+
+								$RareItem2 = ItemFactory::fromString($this->cfg->getNested("Rare.2.Item"));
+								$RareAmount2 = $this->cfg->getNested("Rare.2.Amount");
+								$RareBroadcast2 = $this->cfg->getNested("Rare.2.Broadcast");
+
+							//Item 3
+
+								$RareItem3 = ItemFactory::fromString($this->cfg->getNested("Rare.3.Item"));
+								$RareAmount3 = $this->cfg->getNested("Rare.3.Amount");
+								$RareBroadcast3 = $this->cfg->getNested("Rare.3.Broadcast");
+
+							//Item 4
+
+								$RareItem4 = ItemFactory::fromString($this->cfg->getNested("Rare.4.Item"));
+								$RareAmount4 = $this->cfg->getNested("Rare.4.Amount");
+								$RareBroadcast4 = $this->cfg->getNested("Rare.4.Broadcast");
+
+							//Item 5
+
+								$RareItem5 = ItemFactory::fromString($this->cfg->getNested("Rare.5.Item"));
+								$RareAmount5 = $this->cfg->getNested("Rare.5.Amount");
+								$RareBroadcast5 = $this->cfg->getNested("Rare.5.Broadcast");
+
 								$level->addSound(new EndermanTeleportSound($pos1));
 								$level->addParticle(new LavaParticle($pos1));
-								$inv->removeItem(Item::get(131,3,1));
+								$inv->removeItem(Item::get(131,2,1));
 								$sender->addTitle("§eOpening Crate:", "§6Rare!");
 								$this->getServer()->broadcastMessage($prefix . " §b$name §ajust opened §6Rare §aCrate!");
-								$result = rand(1,6);
+								$result = rand(1,5);
 									 switch($result){
 							case 1:
-								$inv->addItem(Item::get(265,0,20));
-								$sender->sendMessage($prefix . " §bYou won 20 IronIngot!");
+								$inv->addItem($RareItem1->setCount($RareAmount1));
+								$sender->sendMessage($prefix . $RareBroadcast1);
 								 break;
 							case 2:
-								$inv->addItem(Item::get(264,0,5));
-								$sender->sendMessage($prefix . " §bYou won 5 diamonds!");
+								$inv->addItem($RareItem2->setCount($RareAmount2));
+								$sender->sendMessage($prefix . $RareBroadcast2);
 								 break;
 							case 3:
-									$inv->addItem(Item::get(322,0,1));
-									$sender->sendMessage($prefix . " §bYou won a Golden Apple!");
+								$inv->addItem($RareItem3->setCount($RareAmount3));
+								$sender->sendMessage($prefix . $RareBroadcast3);
 								 break;
 							case 4:
-									$i = Item::get(267,0,1);
-									$e = Enchantment::getEnchantment(9);
-									$e->setLevel(2);
-									$i->addEnchantment($e);
-									$inv->addItem($i);
-									$sender->sendMessage($prefix . " §bYou won a Enchanted Iron Sword!"); 
+								$inv->addItem($RareItem4->setCount($RareAmount4));
+								$sender->sendMessage($prefix . $RareBroadcast4);
 								 break;
 							case 5:
-									   $inv->addItem(Item::get(466,0,1));
-									$sender->sendMessage($prefix . " §bYou won a Enchanted Golden Apple!");
-								 break;
-							case 5:
-									$inv->addItem(Item::get(17,0,64));
-									$sender->sendMessage($prefix . " §bYou won 64 oak wood!");
+								$inv->addItem($RareItem5->setCount($RareAmount5));
+								$sender->sendMessage($prefix . $RareBroadcast5);
 								 break;
 									 }
 							}else{
@@ -264,6 +346,55 @@ class Main extends PluginBase implements Listener{
 								$pos1 = new Vector3($x, $y, $z);
 								$name = $sender->getName();
 								$prefix = $this->cfg->get("Prefix");
+
+							//Item1
+
+								$MythicItem1 = ItemFactory::fromString($this->cfg->getNested("Mythic.1.Item"));
+								$MythicAmount1 = $this->cfg->getNested("Mythic.1.Amount");
+								$MythicBroadcast1 = $this->cfg->getNested("Mythic.1.Broadcast");
+
+							//Item2
+
+								$MythicItem2 = ItemFactory::fromString($this->cfg->getNested("Mythic.2.Item"));
+								$MythicAmount2 = $this->cfg->getNested("Mythic.2.Amount");
+								$MythicBroadcast2 = $this->cfg->getNested("Mythic.2.Broadcast");
+
+							//Item3
+
+								$MythicItem3 = ItemFactory::fromString($this->cfg->getNested("Mythic.3.Item"));
+								$MythicAmount3 = $this->cfg->getNested("Mythic.3.Amount");
+								$MythicBroadcast3 = $this->cfg->getNested("Mythic.3.Broadcast");
+
+							//Item4
+
+								$MythicItem4 = ItemFactory::fromString($this->cfg->getNested("Mythic.4.Item"));
+								$MythicAmount4 = $this->cfg->getNested("Mythic.4.Amount");
+								$MythicBroadcast4 = $this->cfg->getNested("Mythic.4.Broadcast");
+
+							//Item5
+
+								$MythicItem5 = ItemFactory::fromString($this->cfg->getNested("Mythic.5.Item"));
+								$MythicAmount5 = $this->cfg->getNested("Mythic.5.Amount");
+								$MythicBroadcast5 = $this->cfg->getNested("Mythic.5.Broadcast");
+
+							//Item6
+
+								$MythicItem6 = ItemFactory::fromString($this->cfg->getNested("Mythic.6.Item"));
+								$MythicAmount6 = $this->cfg->getNested("Mythic.6.Amount");
+								$MythicBroadcast6 = $this->cfg->getNested("Mythic.6.Broadcast");
+
+							//Item7
+
+								$MythicItem7 = ItemFactory::fromString($this->cfg->getNested("Mythic.7.Item"));
+								$MythicAmount7 = $this->cfg->getNested("Mythic.7.Amount");
+								$MythicBroadcast7 = $this->cfg->getNested("Mythic.7.Broadcast");
+
+							//Item8
+
+								$MythicItem8 = ItemFactory::fromString($this->cfg->getNested("Mythic.8.Item"));
+								$MythicAmount8 = $this->cfg->getNested("Mythic.8.Amount");
+								$MythicBroadcast8 = $this->cfg->getNested("Mythic.8.Broadcast");
+
 								$level->addSound(new EndermanTeleportSound($pos1));
 								$level->addParticle(new LavaParticle($pos1));
 								$inv->removeItem(Item::get(131,4,1));
@@ -272,62 +403,36 @@ class Main extends PluginBase implements Listener{
 								$result = rand(1,8);
 									 switch($result){
 							case 1:
-								$inv->addItem(Item::get(266,0,20));
-								$inv->addItem(Item::get(265,0,20));
-								$inv->addItem(Item::get(264,0,20));
-								$inv->addItem(Item::get(351,0,20));
-								$inv->addItem(Item::get(263,0,20));
-								$sender->sendMessage($prefix . " §bYou won 20 of all ores!");
+								$inv->addItem($MythicItem1->setCount($MythicAmount1));
+								$sender->sendMessage($prefix . $MythicBroadcast1);
 								 break;
 							case 2:
-								$inv->addItem(Item::get(264,0,30));
-								$sender->sendMessage($prefix . " §bYou won 30 diamonds!");
+								$inv->addItem($MythicItem2->setCount($MythicAmount2));
+								$sender->sendMessage($prefix . $MythicBroadcast2);
 								 break;
 							case 3:
-									$inv->addItem(Item::get(322,0,20));
-									$sender->sendMessage($prefix . " §bYou won 20 Golden Apples!");
+								$inv->addItem($MythicItem3->setCount($MythicAmount3));
+								$sender->sendMessage($prefix . $MythicBroadcast3);
 								 break;
 							case 4:
-									$i = Item::get(276,0,1);
-									$e = Enchantment::getEnchantment(9);
-									$e->setLevel(3);
-									$e1 = Enchantment::getEnchantment(12);
-									$e1->setLevel(2);
-									$e2 = Enchantment::getEnchantment(13);
-									$e2->setLevel(2);
-									$i->addEnchantment($e);
-									$i->addEnchantment($e1);
-									$i->addEnchantment($e2);
-									$i->setCustomName("§6§lMythic§bSword");
-									$inv->addItem($i);
-									$sender->sendMessage($prefix . " §bYou won a Enchanted §6§lMythic§bSword!"); 
+								$inv->addItem($MythicItem4->setCount($MythicAmount4));
+								$sender->sendMessage($prefix . $MythicBroadcast4);
 								 break;
 							case 5:
-									   $inv->addItem(Item::get(466,0,15));
-									$sender->sendMessage($prefix . " §bYou won 15 Enchanted Golden Apple!");
+								$inv->addItem($MythicItem5->setCount($MythicAmount5));
+								$sender->sendMessage($prefix . $MythicBroadcast5);
 								 break;
 							case 6:
-									$inv->addItem(Item::get(17,5,64));
-									$sender->sendMessage($prefix . " §bYou won 64 spruce wood!");
+								$inv->addItem($MythicItem6->setCount($MythicAmount6));
+								$sender->sendMessage($prefix . $MythicBroadcast6);
 								 break;
 							case 7:
-									$i = Item::get(276,0,1);
-									$e = Enchantment::getEnchantment(9);
-									$e->setLevel(5);
-									$i->addEnchantment($e);
-									$inv->addItem($i);
-									$sender->sendMessage($prefix . " §bYou won a Enchanted Diamond Sword!");
+								$inv->addItem($MythicItem7->setCount($MythicAmount7));
+								$sender->sendMessage($prefix . $MythicBroadcast7);
 								 break;
 							case 8:
-									$chest = Item::get(311,0,1);
-									$e = Enchantment::getEnchantment(1);
-									$e->setLevel(4);
-									$chest->addEnchantment($e);
-									$inv->addItem(Item::get(310,0,1));
-									$inv->addItem($chest);
-									$inv->addItem(Item::get(312,0,1));
-									$inv->addItem(Item::get(313,0,1));
-									$sender->sendMessage($prefix . " §bYou won full set of Diamond Armor with enchanted chestplate!");
+								$inv->addItem($MythicItem8->setCount($MythicAmount8));
+								$sender->sendMessage($prefix . $MythicBroadcast8);
 								 break;
 									 }
 							}else{
@@ -347,6 +452,55 @@ class Main extends PluginBase implements Listener{
 								$pos1 = new Vector3($x, $y, $z);
 								$name = $sender->getName();
 								$prefix = $this->cfg->get("Prefix");
+
+							//Item1
+
+								$LegendaryItem1 = ItemFactory::fromString($this->cfg->getNested("Legendary.1.Item"));
+								$LegendaryAmount1 = $this->cfg->getNested("Legendary.1.Amount");
+								$LegendaryBroadcast1 = $this->cfg->getNested("Legendary.1.Broadcast");
+
+							//Item2
+
+								$LegendaryItem2 = ItemFactory::fromString($this->cfg->getNested("Legendary.2.Item"));
+								$LegendaryAmount2 = $this->cfg->getNested("Legendary.2.Amount");
+								$LegendaryBroadcast2 = $this->cfg->getNested("Legendary.2.Broadcast");
+
+							//Item3
+
+								$LegendaryItem3 = ItemFactory::fromString($this->cfg->getNested("Legendary.3.Item"));
+								$LegendaryAmount3 = $this->cfg->getNested("Legendary.3.Amount");
+								$LegendaryBroadcast3 = $this->cfg->getNested("Legendary.3.Broadcast");
+
+							//Item4
+
+								$LegendaryItem4 = ItemFactory::fromString($this->cfg->getNested("Legendary.4.Item"));
+								$LegendaryAmount4 = $this->cfg->getNested("Legendary.4.Amount");
+								$LegendaryBroadcast4 = $this->cfg->getNested("Legendary.4.Broadcast");
+
+							//Item5
+
+								$LegendaryItem5 = ItemFactory::fromString($this->cfg->getNested("Legendary.5.Item"));
+								$LegendaryAmount5 = $this->cfg->getNested("Legendary.5.Amount");
+								$LegendaryBroadcast5 = $this->cfg->getNested("Legendary.5.Broadcast");
+
+							//Item6
+
+								$LegendaryItem6 = ItemFactory::fromString($this->cfg->getNested("Legendary.6.Item"));
+								$LegendaryAmount6 = $this->cfg->getNested("Legendary.6.Amount");
+								$LegendaryBroadcast6 = $this->cfg->getNested("Legendary.6.Broadcast");
+
+							//Item7
+
+								$LegendaryItem7 = ItemFactory::fromString($this->cfg->getNested("Legendary.7.Item"));
+								$LegendaryAmount7 = $this->cfg->getNested("Legendary.7.Amount");
+								$LegendaryBroadcast7 = $this->cfg->getNested("Legendary.7.Broadcast");
+
+							//Item8
+
+								$LegendaryItem8 = ItemFactory::fromString($this->cfg->getNested("Legendary.8.Item"));
+								$LegendaryAmount8 = $this->cfg->getNested("Legendary.8.Amount");
+								$LegendaryBroadcast8 = $this->cfg->getNested("Legendary.8.Broadcast");
+
 								$level->addSound(new EndermanTeleportSound($pos1));
 								$level->addParticle(new LavaParticle($pos1));
 								$inv->removeItem(Item::get(131,5,1));
@@ -355,52 +509,41 @@ class Main extends PluginBase implements Listener{
 								$result = rand(1,8);
 									 switch($result){
 							case 1:
-								$inv->addItem(Item::get(266,0,20));
-								$sender->sendMessage($prefix . " §bYou won 20 Gold!");
+								$inv->addItem($LegendaryItem1->setCount($LegendaryAmount1));
+								$sender->sendMessage($prefix . $LegendaryBroadcast1);
 								 break;
 							case 2:
-								$inv->addItem(Item::get(264,0,10));
-								$sender->sendMessage($prefix . " §bYou won 10 diamonds!");
+								$inv->addItem($LegendaryItem2->setCount($LegendaryAmount2));
+								$sender->sendMessage($prefix . $LegendaryBroadcast2);
 								 break;
 							case 3:
-									$inv->addItem(Item::get(322,0,2));
-									$sender->sendMessage($prefix . " §bYou won 2 Golden Apples!");
+								$inv->addItem($LegendaryItem3->setCount($LegendaryAmount3));
+								$sender->sendMessage($prefix . $LegendaryBroadcast3);
 								 break;
 							case 4:
-									$i = Item::get(267,0,1);
-									$e = Enchantment::getEnchantment(9);
-									$e->setLevel(3);
-									$i->addEnchantment($e);
-									$inv->addItem($i);
-									$sender->sendMessage($prefix . " §bYou won a Enchanted Iron Sword!"); 
+								$inv->addItem($LegendaryItem4->setCount($LegendaryAmount4));
+								$sender->sendMessage($prefix . $LegendaryBroadcast4);
 								 break;
 							case 5:
-									   $inv->addItem(Item::get(466,0,5));
-									$sender->sendMessage($prefix . " §bYou won 5 Enchanted Golden Apple!");
+								$inv->addItem($LegendaryItem5->setCount($LegendaryAmount5));
+								$sender->sendMessage($prefix . $LegendaryBroadcast5);
 								 break;
 							case 6:
-									$inv->addItem(Item::get(17,5,64));
-									$sender->sendMessage($prefix . " §bYou won 64 spruce wood!");
+								$inv->addItem($LegendaryItem6->setCount($LegendaryAmount6));
+								$sender->sendMessage($prefix . $LegendaryBroadcast6);
 								 break;
 							case 7:
-									$i = Item::get(276,0,1);
-									$e = Enchantment::getEnchantment(9);
-									$e->setLevel(5);
-									$i->addEnchantment($e);
-									$inv->addItem($i);
-									$sender->sendMessage($prefix . " §bYou won a Enchanted Diamond Sword!");
+								$inv->addItem($LegendaryItem7->setCount($LegendaryAmount7));
+								$sender->sendMessage($prefix . $LegendaryBroadcast7);
 								 break;
 							case 8:
-									$inv->addItem(Item::get(310,0,1));
-									$inv->addItem(Item::get(311,0,1));
-									$inv->addItem(Item::get(312,0,1));
-									$inv->addItem(Item::get(313,0,1));
-									$sender->sendMessage($prefix . " §bYou won full set of Diamond Armor!");
+								$inv->addItem($LegendaryItem8->setCount($LegendaryAmount8));
+								$sender->sendMessage($prefix . $LegendaryBroadcast8);
 								 break;
 									 }
 							}else{
 								$prefix = $this->cfg->get("Prefix");
-								$sender->sendMessage($prefix . " §fYou don't have §9Legendary §fKey.");
+								$sender->sendMessage(" §fYou don't have §9Legendary §fKey.");
 							}
 						break;
 					}
