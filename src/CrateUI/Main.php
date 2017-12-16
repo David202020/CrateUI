@@ -552,7 +552,7 @@ class Main extends PluginBase implements Listener{
 				$form->setTitle("§9Crates");
 				$form->setContent("§eYou need key to open any crate!");
 
-				$form->addButton("");
+				$form->addButton("exit");
 				$form->addButton("§aCommon", 1, "http://xxniceyt.ga/games/Vote.jpg");
 				$form->addButton("§cVote", 2, "http://xxniceyt.ga/games/Common.jpg");
 				$form->addButton("§6Rare", 3, "http://xxniceyt.ga/games/Rare.jpg");
