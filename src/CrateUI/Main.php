@@ -556,7 +556,7 @@ class Main extends PluginBase implements Listener{
 				$form->addButton("§aCommon", 1, "http://xxniceyt.ga/games/Vote.jpg");
 				$form->addButton("§cVote", 2, "http://xxniceyt.ga/games/Common.jpg");
 				$form->addButton("§6Rare", 3, "http://xxniceyt.ga/games/Rare.jpg");
-				$form->addButton("§cWither&fBox", 4, "http://xxniceyt.ga/games/Mythic.jpg");
+				$form->addButton("§cWither§fBox", 4, "http://xxniceyt.ga/games/Mythic.jpg");
 				$form->addButton("§9Legendary", 5, "http://xxniceyt.ga/games/Legendary.jpg");
 
 				$form->sendToPlayer($sender);
