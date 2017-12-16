@@ -4,4 +4,5 @@ branches:
 projects:
   CrateUI:
     path: ""
+    icon: icon.png
 ...
