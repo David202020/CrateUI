@@ -37,7 +37,7 @@ class getkey extends PluginCommand{
         $commonname = Item::get(131,1,1);
         $votename = Item::get(131,2,1);
         $rarename = Item::get(131,3,1);
-        $mythicname = Item::get(131,4,1);
+        $WitherBoxname = Item::get(131,4,1);
         $legendaryname = Item::get(131,5,1);
         $e = Enchantment::getEnchantment(0);
 
@@ -46,7 +46,7 @@ class getkey extends PluginCommand{
             $sender->sendMessage("§a/getkey Common §e: §bGet Common key.");
             $sender->sendMessage("§c/getkey Vote §e: §bGet Vote key.");
             $sender->sendMessage("§6/getkey Rare §e: §bGet Rare key.");
-            $sender->sendMessage("§5/getkey Mythic §e: §bGet Mythic key.");
+            $sender->sendMessage("§5/getkey WitherBox §e: §bGet WitherBox key.");
             $sender->sendMessage("§b/getkey Legendary §e: §bGet Legendary key.");
             $sender->sendMessage("§b===>§eKeys§b<===");
             return false;
@@ -143,14 +143,14 @@ class getkey extends PluginCommand{
             $sender->sendMessage($prefix . " §9" . $player->getName() . " §ehas received a §6Rare §eKey.");
             break;
             case "4":
-            case "mythic":
-            case "Mythic":
+            case "witherbox":
+            case "WitherBox":
                     if (!$sender->hasPermission("crate.key")) {
                         $sender->sendMessage($prefix . " §cYou are not allow to do that.");
                         return false;
                     }
                     if (count($args) < 2) {
-                        $sender->sendMessage("Usage: /key Mythic <Player>");
+                        $sender->sendMessage("Usage: /key WitherBox <Player>");
                         return false;
                     }
                     if (isset($args[1])) {
@@ -167,10 +167,10 @@ class getkey extends PluginCommand{
                     }
             $e->setLevel(-1);
             $mythicname->addEnchantment($e);
-            $mythicname->setCustomName("§5Mythic");
-            $player->getInventory()->addItem($mythicname);
-            $player->sendMessage($prefix . " §eYou receive a §5Mythic §eKey.");
-            $sender->sendMessage($prefix . " §9" . $player->getName() . " §ehas received a §5Mythic §eKey.");
+            $mythicname->setCustomName("§cWither&fBox");
+            $player->getInventory()->addItem($WitherBoxname);
+            $player->sendMessage($prefix . " §eYou receive a §cWither&fBox §eKey.");
+            $sender->sendMessage($prefix . " §9" . $player->getName() . " §ehas received a &cWither&fBox §eKey.");
             break;
             case "5":
             case "legendary":
@@ -207,7 +207,7 @@ class getkey extends PluginCommand{
             $sender->sendMessage("§a/getkey Common §e: §bGet Common key.");
             $sender->sendMessage("§c/getkey Vote §e: §bGet Vote key.");
             $sender->sendMessage("§6/getkey Rare §e: §bGet Rare key.");
-            $sender->sendMessage("§5/getkey Mythic §e: §bGet Mythic key.");
+            $sender->sendMessage("§5/getkey WitherBox §e: §bGet WitherBox key.");
             $sender->sendMessage("§b/getkey Legendary §e: §bGet Legendary key.");
             $sender->sendMessage("§b===>§eKeys§b<===");
             break;
