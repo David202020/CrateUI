@@ -37,7 +37,7 @@ class getkey extends PluginCommand{
         $commonname = Item::get(131,1,1);
         $votename = Item::get(131,2,1);
         $rarename = Item::get(131,3,1);
-        $WitherBoxname = Item::get(131,4,1);
+        $witherboxname = Item::get(131,4,1);
         $legendaryname = Item::get(131,5,1);
         $e = Enchantment::getEnchantment(0);
 
@@ -144,7 +144,7 @@ class getkey extends PluginCommand{
             break;
             case "4":
             case "witherbox":
-            case "WitherBox":
+            case "Witherbox":
                     if (!$sender->hasPermission("crate.key")) {
                         $sender->sendMessage($prefix . " §cYou are not allow to do that.");
                         return false;
@@ -166,11 +166,11 @@ class getkey extends PluginCommand{
                         return false;
                     }
             $e->setLevel(-1);
-            $mythicname->addEnchantment($e);
-            $mythicname->setCustomName("§cWither&fBox");
+            $witherboxame->addEnchantment($e);
+            $witherboxname->setCustomName("§cWitherBox");
             $player->getInventory()->addItem($WitherBoxname);
-            $player->sendMessage($prefix . " §eYou receive a §cWither&fBox §eKey.");
-            $sender->sendMessage($prefix . " §9" . $player->getName() . " §ehas received a &cWither&fBox §eKey.");
+            $player->sendMessage($prefix . " §eYou receive a §cWitherBox §eKey.");
+            $sender->sendMessage($prefix . " §9" . $player->getName() . " §ehas received a §cWitherBox §eKey.");
             break;
             case "5":
             case "legendary":
