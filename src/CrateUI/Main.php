@@ -335,7 +335,7 @@ class Main extends PluginBase implements Listener{
 							}
 						break;
 						case 4:
-							//mythic
+							//WitherBox
 							$inv = $sender->getInventory();
 							if($inv->contains(Item::get(131,4,1))){
 								$level = $sender->getLevel();
@@ -349,95 +349,95 @@ class Main extends PluginBase implements Listener{
 
 							//Item1
 
-								$MythicItem1 = ItemFactory::fromString($this->cfg->getNested("Mythic.1.Item"));
-								$MythicAmount1 = $this->cfg->getNested("Mythic.1.Amount");
-								$MythicBroadcast1 = $this->cfg->getNested("Mythic.1.Broadcast");
+								$WitherBoxItem1 = ItemFactory::fromString($this->cfg->getNested("WitherBox.1.Item"));
+								$WitherBoxAmount1 = $this->cfg->getNested("WitherBox.1.Amount");
+								$WitherBoxBroadcast1 = $this->cfg->getNested("WitherBox.1.Broadcast");
 
 							//Item2
 
-								$MythicItem2 = ItemFactory::fromString($this->cfg->getNested("Mythic.2.Item"));
-								$MythicAmount2 = $this->cfg->getNested("Mythic.2.Amount");
-								$MythicBroadcast2 = $this->cfg->getNested("Mythic.2.Broadcast");
+								$WitherBoxItem2 = ItemFactory::fromString($this->cfg->getNested("WitherBox.2.Item"));
+								$WitherBoxAmount2 = $this->cfg->getNested("WitherBox.2.Amount");
+								$WitherBoxBroadcast2 = $this->cfg->getNested("WitherBox.2.Broadcast");
 
 							//Item3
 
-								$MythicItem3 = ItemFactory::fromString($this->cfg->getNested("Mythic.3.Item"));
-								$MythicAmount3 = $this->cfg->getNested("Mythic.3.Amount");
-								$MythicBroadcast3 = $this->cfg->getNested("Mythic.3.Broadcast");
+								$WitherBox3 = ItemFactory::fromString($this->cfg->getNested("WitherBox.3.Item"));
+								$WitherBoxAmount3 = $this->cfg->getNested("WitherBox.3.Amount");
+								$WitherBoxBroadcast3 = $this->cfg->getNested("WitherBox.3.Broadcast");
 
 							//Item4
 
-								$MythicItem4 = ItemFactory::fromString($this->cfg->getNested("Mythic.4.Item"));
-								$MythicAmount4 = $this->cfg->getNested("Mythic.4.Amount");
-								$MythicBroadcast4 = $this->cfg->getNested("Mythic.4.Broadcast");
+								$WitherBoxItem4 = ItemFactory::fromString($this->cfg->getNested("WitherBox.4.Item"));
+								$WitherBoxAmount4 = $this->cfg->getNested("WitherBox.4.Amount");
+								$WitherBoxBroadcast4 = $this->cfg->getNested("WitherBox.4.Broadcast");
 
 							//Item5
 
-								$MythicItem5 = ItemFactory::fromString($this->cfg->getNested("Mythic.5.Item"));
-								$MythicAmount5 = $this->cfg->getNested("Mythic.5.Amount");
-								$MythicBroadcast5 = $this->cfg->getNested("Mythic.5.Broadcast");
+								$WitherBoxItem5 = ItemFactory::fromString($this->cfg->getNested("WitherBox.5.Item"));
+								$WitherBoxAmount5 = $this->cfg->getNested("WitherBox.5.Amount");
+								$WitherBoxBroadcast5 = $this->cfg->getNested("WitherBox.5.Broadcast");
 
 							//Item6
 
-								$MythicItem6 = ItemFactory::fromString($this->cfg->getNested("Mythic.6.Item"));
-								$MythicAmount6 = $this->cfg->getNested("Mythic.6.Amount");
-								$MythicBroadcast6 = $this->cfg->getNested("Mythic.6.Broadcast");
+								$WitherBoxItem6 = ItemFactory::fromString($this->cfg->getNested("WitherBox.6.Item"));
+								$WitherBoxAmount6 = $this->cfg->getNested("WitherBox.6.Amount");
+								$WitherBoxBroadcast6 = $this->cfg->getNested("WitherBox.6.Broadcast");
 
 							//Item7
 
-								$MythicItem7 = ItemFactory::fromString($this->cfg->getNested("Mythic.7.Item"));
-								$MythicAmount7 = $this->cfg->getNested("Mythic.7.Amount");
-								$MythicBroadcast7 = $this->cfg->getNested("Mythic.7.Broadcast");
+								$WitherBoxItem7 = ItemFactory::fromString($this->cfg->getNested("WitherBox.7.Item"));
+								$WitherBoxAmount7 = $this->cfg->getNested("WitherBox.7.Amount");
+								$WitherBoxBroadcast7 = $this->cfg->getNested("WitherBox.7.Broadcast");
 
 							//Item8
 
-								$MythicItem8 = ItemFactory::fromString($this->cfg->getNested("Mythic.8.Item"));
-								$MythicAmount8 = $this->cfg->getNested("Mythic.8.Amount");
-								$MythicBroadcast8 = $this->cfg->getNested("Mythic.8.Broadcast");
+								$WitherBoxItem8 = ItemFactory::fromString($this->cfg->getNested("WitherBox.8.Item"));
+								$WitherBoxAmount8 = $this->cfg->getNested("WitherBox.8.Amount");
+								$WitherBoxBroadcast8 = $this->cfg->getNested("WitherBox.8.Broadcast");
 
 								$level->addSound(new EndermanTeleportSound($pos1));
 								$level->addParticle(new LavaParticle($pos1));
 								$inv->removeItem(Item::get(131,4,1));
-								$sender->addTitle("§eOpening Crate:", "§5Mythic!");
-								$this->getServer()->broadcastMessage($prefix . " §b$name §ajust opened §5Mythic §aCrate!");
+								$sender->addTitle("§eOpening Crate:", "§WitherBox!");
+								$this->getServer()->broadcastMessage($prefix . " §b$name §ajust opened §cWither&fBox §aCrate!");
 								$result = rand(1,8);
 									 switch($result){
 							case 1:
-								$inv->addItem($MythicItem1->setCount($MythicAmount1));
-								$sender->sendMessage($prefix . $MythicBroadcast1);
+								$inv->addItem($WitherBoxItem1->setCount($WitherBoxAmount1));
+								$sender->sendMessage($prefix . $WitherBoxBroadcast1);
 								 break;
 							case 2:
-								$inv->addItem($MythicItem2->setCount($MythicAmount2));
-								$sender->sendMessage($prefix . $MythicBroadcast2);
+								$inv->addItem($WitherBoxItem2->setCount($WitherBoxAmount2));
+								$sender->sendMessage($prefix . $WitherBoxBroadcast2);
 								 break;
 							case 3:
-								$inv->addItem($MythicItem3->setCount($MythicAmount3));
-								$sender->sendMessage($prefix . $MythicBroadcast3);
+								$inv->addItem($WitherBoxItem3->setCount($WitherBoxAmount3));
+								$sender->sendMessage($prefix . $WitherBoxBroadcast3);
 								 break;
 							case 4:
-								$inv->addItem($MythicItem4->setCount($MythicAmount4));
-								$sender->sendMessage($prefix . $MythicBroadcast4);
+								$inv->addItem($WitherBoxItem4->setCount($WitherBoxAmount4));
+								$sender->sendMessage($prefix . $WitherBoxBroadcast4);
 								 break;
 							case 5:
-								$inv->addItem($MythicItem5->setCount($MythicAmount5));
-								$sender->sendMessage($prefix . $MythicBroadcast5);
+								$inv->addItem($WitherBoxItem5->setCount($WitherBoxAmount5));
+								$sender->sendMessage($prefix . $WitherBoxBroadcast5);
 								 break;
 							case 6:
-								$inv->addItem($MythicItem6->setCount($MythicAmount6));
-								$sender->sendMessage($prefix . $MythicBroadcast6);
+								$inv->addItem($WitherBoxItem6->setCount($WitherBoxAmount6));
+								$sender->sendMessage($prefix . $WitherBoxBroadcast6);
 								 break;
 							case 7:
-								$inv->addItem($MythicItem7->setCount($MythicAmount7));
-								$sender->sendMessage($prefix . $MythicBroadcast7);
+								$inv->addItem($WitherBoxItem7->setCount($WitherBoxAmount7));
+								$sender->sendMessage($prefix . $WitherBoxBroadcast7);
 								 break;
 							case 8:
-								$inv->addItem($MythicItem8->setCount($MythicAmount8));
-								$sender->sendMessage($prefix . $MythicBroadcast8);
+								$inv->addItem($WitherBoxItem8->setCount($WitherBoxAmount8));
+								$sender->sendMessage($prefix . $WitherBoxBroadcast8);
 								 break;
 									 }
 							}else{
 								$prefix = $this->cfg->get("Prefix");
-								$sender->sendMessage(" §fYou don't have §5Mythic §fKey.");
+								$sender->sendMessage(" §fYou don't have §5WitherBox §fKey.");
 							}
 						break;
 						case 5:
@@ -552,11 +552,11 @@ class Main extends PluginBase implements Listener{
 				$form->setTitle("§9Crates");
 				$form->setContent("§eYou need key to open any crate!");
 
-				$form->addButton("exit");
+				$form->addButton("exit", 0, "http://pixelartmaker.com/art/36cd392e6295705.png");
 				$form->addButton("§aCommon", 1, "http://xxniceyt.ga/games/Vote.jpg");
 				$form->addButton("§cVote", 2, "http://xxniceyt.ga/games/Common.jpg");
 				$form->addButton("§6Rare", 3, "http://xxniceyt.ga/games/Rare.jpg");
-				$form->addButton("§5Mythic", 4, "http://xxniceyt.ga/games/Mythic.jpg");
+				$form->addButton("§cWither&fBox", 4, "http://xxniceyt.ga/games/Mythic.jpg");
 				$form->addButton("§9Legendary", 5, "http://xxniceyt.ga/games/Legendary.jpg");
 
 				$form->sendToPlayer($sender);
